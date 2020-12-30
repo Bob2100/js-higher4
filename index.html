@@ -9,7 +9,9 @@
       let p1 = new Promise((resolve) => resolve());
       let p2 = Promise.resolve();
 
-      console.log(p1, p2);//两种做法相同
+      console.log(p1, p2); //两种做法相同
+
+      console.log(Promise.resolve(3));
     </script>
   </body>
 </html>
