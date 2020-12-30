@@ -6,15 +6,10 @@
   </head>
   <body>
     <script>
-      let p = new Promise((resolve, reject) => {
-        setTimeout(reject, 10000); //10秒钟后拒绝
+      let p1 = new Promise((resolve) => resolve());
+      let p2 = Promise.resolve();
 
-        // 执行逻辑代码
-      });
-
-      setTimeout(console.log, 0, p); //pending
-      setTimeout(console.log, 10000, p); //error
-      setTimeout(console.log, 11000, p); //reject
+      console.log(p1, p2);//两种做法相同
     </script>
   </body>
 </html>
