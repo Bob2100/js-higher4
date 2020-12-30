@@ -6,13 +6,9 @@
   </head>
   <body>
     <script>
-      // 调用resolve把Promise切换为兑换状态
-      let p1 = new Promise((resolve, reject) => resolve());
-      setTimeout(console.log, 0, p1);
-
-      // 调用reject将Promise切换为拒绝状态，同时抛出错误
-      let p2 = new Promise((resolve, reject) => reject());
-      setTimeout(console.log, 0, p2);
+      // 执行器函数是同步执行的，执行器函数是期约的初始化程序
+      new Promise(() => setTimeout(console.log, 0, "execotor"));
+      setTimeout(console.log, 0, "Promise initialized");
     </script>
   </body>
 </html>
