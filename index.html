@@ -6,8 +6,11 @@
   </head>
   <body>
     <script>
-      let p = new Promise((resolve, reject) => setTimeout(resolve, 1000));
-      setTimeout(console.log, 0, p);//pending
+      let p = new Promise((resolve, reject) => {
+        resolve();
+        reject(); //没有效果
+      });
+      setTimeout(console.log, 0, p); //resolved
     </script>
   </body>
 </html>
