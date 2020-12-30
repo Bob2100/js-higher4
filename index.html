@@ -7,10 +7,14 @@
   <body>
     <script>
       let p = new Promise((resolve, reject) => {
-        resolve();
-        reject(); //没有效果
+        setTimeout(reject, 10000); //10秒钟后拒绝
+
+        // 执行逻辑代码
       });
-      setTimeout(console.log, 0, p); //resolved
+
+      setTimeout(console.log, 0, p); //pending
+      setTimeout(console.log, 10000, p); //error
+      setTimeout(console.log, 11000, p); //reject
     </script>
   </body>
 </html>
