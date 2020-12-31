@@ -12,6 +12,10 @@
         console.log(e);
       }
       // Uncaught (in promise) 3
+      /*
+        这里的同步代码之所以没有捕获期约抛出的错误，是因为它
+        没有通过异步模式捕获错误。期约是同步对象，
+      */
     </script>
   </body>
 </html>
