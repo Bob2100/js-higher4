@@ -6,18 +6,31 @@
   </head>
   <body>
     <script>
-      try {
-        Promise.reject(3);
-      } catch (e) {
-        console.log(e);
+      // Promise.prototype.then()是为期约实例添加处理程序的主要方法
+      function onResolved(id) {
+        console.log(id, "resolved");
       }
-      // Uncaught (in promise) 3
-      /*
-        这里的同步代码之所以没有捕获期约抛出的错误，是因为它
-        没有通过异步模式捕获错误。期约是同步对象，但也是异步执行模式的媒介。
+      function onReject(id) {
+        console.log(id, "reject");
+      }
 
-        这个例子中，
-      */
+      let p1 = new Promise((resolve, reject) => {
+        setTimeout(resolve, 3000);
+      });
+      let p2 = new Promise((resolve, reject) => {
+        setTimeout(reject, 3000);
+      });
+
+      p1.then(
+        () => onResolved("p1"),
+        () => onReject("p1")
+      );
+
+      // 也就相当于捕获了错误
+      p2.then(
+        () => onResolved("p2"),
+        () => onReject("p2")
+      );
     </script>
   </body>
 </html>
