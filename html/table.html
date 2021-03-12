@@ -6,44 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      /* 给容器一个宽度，并在页面居中 */
       div {
-        width: 800px;
+        width: 500px;
         margin: 0 auto;
       }
+
       table {
-        table-layout: fixed;
         border-collapse: collapse;
         width: 100%;
         border: 1px solid gray;
-      }
-      table th:nth-child(1),
-      table td:nth-child(1) {
-        width: 30%;
-      }
-      table th:nth-child(2),
-      table td:nth-child(2) {
-        width: 20%;
-      }
-      table th:nth-child(3),
-      table th:nth-child(3) {
-        width: 50%;
-      }
-      table th,
-      table td {
         text-align: center;
       }
       table thead {
-        background-color: indianred;
+        background-color: orange;
       }
-      table tbody tr:nth-of-type(odd) {
+      table tbody tr:nth-of-type(even) {
         background-color: lightblue;
       }
 
+      /* 使用最简单的滚动方法，在y轴实现滚动效果 */
       table tbody {
         display: block;
-        height: 300px;
+        height: 100px;
         overflow-y: scroll;
+      }
 
+      /* tr设置宽度，并采用table布局 */
+      table tr {
+        width: 100%;
+        display: table;
+      }
+
+      table tbody {
         /* firefox */
         scrollbar-width: none;
         /* ie10+ */
@@ -52,13 +47,6 @@
       /* chrome safari */
       table tbody::-webkit-scrollbar {
         display: none;
-      }
-
-      table thead,
-      tbody tr {
-        display: table;
-        width: 100%;
-        table-layout: fixed;
       }
     </style>
   </head>
@@ -72,96 +60,6 @@
           <th>第三列</th>
         </thead>
         <tbody>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
-          <tr>
-            <td>aaaa</td>
-            <td>bbbb</td>
-            <td>cccc</td>
-          </tr>
           <tr>
             <td>aaaa</td>
             <td>bbbb</td>
