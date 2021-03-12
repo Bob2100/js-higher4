@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 800px;
+        margin: 0 auto;
+      }
+      table {
+        table-layout: fixed;
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid gray;
+      }
+      table th:nth-child(1),
+      table td:nth-child(1) {
+        width: 30%;
+      }
+      table th:nth-child(2),
+      table td:nth-child(2) {
+        width: 20%;
+      }
+      table th:nth-child(3),
+      table th:nth-child(3) {
+        width: 50%;
+      }
+      table th,
+      table td {
+        text-align: center;
+      }
+      table thead {
+        background-color: indianred;
+      }
+      table tbody tr:nth-of-type(odd) {
+        background-color: lightblue;
+      }
+
+      table tbody {
+        display: block;
+        height: 300px;
+        overflow-y: scroll;
+
+        /* firefox */
+        scrollbar-width: none;
+        /* ie10+ */
+        -ms-overflow-style: none;
+      }
+      /* chrome safari */
+      table tbody::-webkit-scrollbar {
+        display: none;
+      }
+
+      table thead,
+      tbody tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 实现一个固定表头，可滚动的table -->
+    <div>
+      <table>
+        <thead>
+          <th>第一列</th>
+          <th>第二列</th>
+          <th>第三列</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+          <tr>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
